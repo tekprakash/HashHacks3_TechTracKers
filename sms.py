@@ -1,16 +1,9 @@
-from twilio.rest import Client
+import nexmo
 
-def send(msg):
-    account_sid="your auth_id"
-    auth_token="your auth_token"
-    client=Client(account_sid, auth_token)
-    if msg:
-        client.messages.create(
-        to="123456789",
-        from_="123456789",
-        body=msg)
-    else:
-        client.messages.create(
-        to="123456789",
-        from_="123456789",
-        body="Hello")
+client = nexmo.Client(key='03a93241', secret='97af4fc9b97a6cc1')
+
+client.send_message({
+    'from': 'Nexmo',
+    'to': '917291872075',
+    'text': 'Hello from Nexmo',
+})

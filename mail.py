@@ -14,3 +14,4 @@ s.sendmail("sender_email_id", "receiver_email_id", message)
 s.quit()
 
 #Here we can use base64 for encrypting passwords
+                
